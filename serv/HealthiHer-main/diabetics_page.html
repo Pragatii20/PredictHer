@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #ffdaee; 
+            
+        }
+    </style>
+    <div class="container">
+        <h1>Diabetes Predictor</h1>
+        <form id="diabetesForm">
+            <label for="pregnancies">Number of Pregnancies:</label>
+            <input type="number" id="pregnancies" name="pregnancies" required><br><br>
+            
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" id="glucose" name="glucose" required><br><br>
+            
+            <label for="bloodPressure">Blood Pressure:</label>
+            <input type="number" id="bloodPressure" name="bloodPressure" required><br><br>
+            
+            <label for="skinThickness">Skin Thickness:</label>
+            <input type="number" id="skinThickness" name="skinThickness" required><br><br>
+            
+            <label for="insulin">Insulin Level:</label>
+            <input type="number" id="insulin" name="insulin" required><br><br>
+            
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.01" required><br><br>
+            
+            <label for="diabetesPedigree">Diabetes Pedigree:</label>
+            <input type="number" id="diabetesPedigree" name="diabetesPedigree" step="0.01" required><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+    <section id="banner">
+        <!-- Banner section content -->
+
+        <style>
+            .banner {
+                background-color: rgb(250, 50, 87); /* Change background color to white */
+                color: rgb(255, 255, 255); /* Change text color to black */
+                /* Add any other styling you need for the banner */
+            }
+        </style>
+
+        <div class="banner">
+            <div class="bannerText" data-aos="fade-right" data-aos-duration="1000">
+                <h1>How can you look after your Health?<br> <span style="font-size:1.6vw;font-weight:normal"  class="bannerInnerText">
+                    The work of daily life makes it difficult for women to look after their health. Don't let your health take a back seat in your life! Enjoy a <b>meditation session</b> on our <b> meditation app.</b><br>
+
+                    <a class="js-scroll-trigger" href="app.html"> Get Started here! →</a>
+                </span> </h1>
+                
+            </div>
+            <div class="bannerImg" data-aos="fade-up" data-aos-duration="1000">
+                <img src="HealthiHer/img/appimg.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('diabetesForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+    const patient = {};
+    formData.forEach((value, key) => {
+        patient[key] = value;
+    });
+
+    const response = await fetch('http://127.0.0.1:8000/predict_diabetes', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(patient)
+    });
+
+    const data = await response.json();
+    document.getElementById('result').innerHTML = data.prediction ? 'You have diabetes.' : 'You are healthy.';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https:fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #ffdaee;
+     </style>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/ac8a04ca-c118-4c80-8e06-ea78f170c429/webchat/config.js" defer></script>
+    <div class="nav">
+        <div class="logo">
+            <img src="HealthiHer/img/Group 9.png" alt="Company Logo">
+            <h1>PredictHer</h1>
+        </div>
+        <ul class="links">
+            <li><a href="index.html" onclick="toggleActive(this)">Home</a></li>
+            <li><a href="app.html" onclick="toggleActive(this)">App</a></li>
+        </ul>
+    </div>
+    <section id="infoSection">
+        <div class="infoHeader" data-aos="fade-up" data-aos-duration="1000">
+            <h1><br> <span style="color:#e0501b">Which illness are you Anticipating?</span> </h1>
+        </div>
+        <div class="infoCards">
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <a href="breast_cancer_page.html"><img src="HealthiHer/img/ssbc.png" class="cardoneImg" alt=""></a>
+                <div class="cardContent">
+                    <h2>Breast Cancer</h2>
+                </div>
+            </div>
+        }
+            
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <a href="heart_page.html"><img src="HealthiHer/img/phyimg.png" class="cardoneImg" alt=""></a>
+                <div class="cardContent">
+                    <h2>Cardiovascular Diseases</h2>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1300">
+                <a href="diabetics_page.html"><img src="HealthiHer/img/db.png" class="cardfiveImg" alt=""></a>
+                <div class="cardContent">
+                    <h2>Diabetic Predictor</h2>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function toggleActive(element) {
+            // Remove the active class from all navigation links
+            const links = document.querySelectorAll('.links a');
+            links.forEach(link => link.classList.remove('active'));
+
+            // Add the active class to the clicked link
+            element.classList.add('active');
+        }
+    </script>
+    <section id="banner">
+        
+
+        <style>
+            .banner {
+                background-color: rgb(250, 50, 87); /* Change background color to white */
+                color: rgb(255, 255, 255); /* Change text color to black */
+                /* Add any other styling you need for the banner */
+            }
+        </style>
+
+        <div class="banner">
+            <div class="bannerText" data-aos="fade-right" data-aos-duration="1000">
+                <h1>How can you look after your Health?<br> <span style="font-size:1.6vw;font-weight:normal"  class="bannerInnerText">
+                    The work of daily life makes it difficult for women to look after their health. Don't let your health take a back seat in your life! Enjoy a <b>meditation session</b> on our <b> meditation app.</b><br>
+
+                    <a class="js-scroll-trigger" href="app.html"> Get Started here! →</a>
+                </span> </h1>
+                
+            </div>
+            <div class="bannerImg" data-aos="fade-up" data-aos-duration="1000">
+                <img src="HealthiHer/img/appimg.png" alt="">
+            </div>
+        </div>
+
+        <div class="connect-us">
+            <h2>Connect with us</h2>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" title="Facebook"><img src="fb.png" alt="Facebook" style="width: 30px;"></a>
+                <a href="https://www.linkedin.com/" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn" style="width: 30px;"></a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:supportabc@gmail.com">supportabc@gmail.com</a><br>
+                <a href="tel:9999140999">Number: 9999140999</a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

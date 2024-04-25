@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HealthiHer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #ffdaee; 
+            
+        }
+    </style>
+
+<style>
+    /* ... other CSS rules ... */
+
+    .blob {
+        width: 550px;
+        height: 500px;
+        border-radius: 50%;
+        position: absolute;
+        animation: rotate 5s infinite;
+    }
+    .blob:nth-child(1) {
+            background-color: rgb(245, 152, 239);
+            left: 50px;
+            top: 120px;
+            animation-delay: 0.5s;
+        }
+    
+        .blob:nth-child(2) {
+            background-color: rgb(245, 152, 239);
+            left: 200px;
+            top: 220px;
+            animation-delay: 1s;
+        }
+    
+        .blob:nth-child(3) {
+            background-color: rgb(245, 152, 239);
+            left: 350px;
+            top: 120px;
+            animation-delay: 2s;
+        }
+        blob:nth-child(4) {
+            background-color: rgb(245, 152, 239);
+            left: 350px;
+            top: 50px;
+            animation-delay: 3s;
+        }
+    
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <img src="HealthiHer/img/Group 9.png" alt="Company Logo">
+                <h1>PredictHer</h1>
+            </div>
+            <div class="links">
+                <a href="#landing" onclick="toggleActive(this)">Home</a>
+                <a href="#about" onclick="toggleActive(this)">Why Take Care</a>
+                <a href="#banner" onclick="toggleActive(this)">Activities</a>
+                <!-- <a href="app.html" onclick="toggleActive(this)">App</a> -->
+
+            </div>
+        </div>
+        <section id="landing">
+            <div class="landing">
+                <div class="landingText" data-aos="fade-up" data-aos-duration="1000">
+                    <h1>Your Health<span style="color:#e0501b;"> Matters</span> </h1>
+                    <h3><b> Welcome to PredictHer - </b>Your premier destination for predictive insights into women's health. We specialize in forecasting and trends analysis to empower women with the knowledge they need to stay ahead of potential health issues. From preventative measures to early detection, we're here to guide you on your journey towards optimal well-being. Join us as we navigate the future of female health together.</h3>
+                    <div class="btn">
+                        <a href= "home_page.html"> Let's Predict</a>
+                    </div>
+                </div>
+                <div class="landingImage" data-aos="fade-down" data-aos-duration="2000">
+                    <img src="HealthiHer/img/landingimg.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <!-- About section content -->
+            <div class="about">    
+                <div class="aboutText" data-aos="fade-left" data-aos-duration="1000">
+                    <h1>Empowering women through <br> <span style="color:#2f8be0;font-size:3vw">data-driven health forecasts</span></h1>
+                    <img src="HealthiHer/img/impimg.jpeg" alt="">
+                </div>
+                <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                    <ol>
+                        <li> 
+                            <span>01</span>
+                             <p>According to a recent report by the WHO (World Health Organization), 1 in 12 women are at the risk of developing cancer at some or the other point in their life.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>The heart ailments are also a matter of concern for women not only in India but also globally. </p>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>In case a woman has a low RBC (Red Blood Cells) count, low haemoglobin levels; she is definitely anaemic. A woman might look healthy even if she is anaemic.</p>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <p>Along with the illnesses mentioned above; currently today's woman also is prone to the issues of mental health. Women are now also at the risk of depression, anxiety, insomnia, etc.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section id="banner">
+            <!-- Banner section content -->
+
+            <style>
+                .banner {
+                    background-color: rgb(250, 50, 87); /* Change background color to white */
+                    color: rgb(255, 255, 255); /* Change text color to black */
+                    /* Add any other styling you need for the banner */
+                }
+            </style>
+
+            <div class="banner">
+                <div class="bannerText" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>How can you look after your Health?<br> <span style="font-size:1.6vw;font-weight:normal"  class="bannerInnerText">
+                        The work of daily life makes it difficult for women to look after their health. Don't let your health take a back seat in your life! Enjoy a <b>meditation session</b> on our <b> meditation app.</b><br>
+
+                        <a class="js-scroll-trigger" href="app.html"> Get Started here! →</a>
+                    </span> </h1>
+                    
+                </div>
+                <div class="bannerImg" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="HealthiHer/img/appimg.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="connect-us">
+        <h2>Connect with us</h2>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" title="Facebook"><img src="fb.png" alt="Facebook" style="width: 30px;"></a>
+            <a href="https://www.linkedin.com/" title="LinkedIn"><img src="linkedin.png" alt="LinkedIn" style="width: 30px;"></a>
+        </div>
+        <div class="contact-info">
+            <a href="mailto:supportabc@gmail.com">supportabc@gmail.com</a><br>
+            <a href="tel:9999140999">Number: 9999140999</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function toggleActive(element) {
+            // Remove the active class from all navigation links
+            const links = document.querySelectorAll('.links a');
+            links.forEach(link => link.classList.remove('active'));
+
+            // Add the active class to the clicked link
+            element.classList.add('active');
+        }
+
+        // Smooth scrolling function
+        document.querySelectorAll('.links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetSectionId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetSectionId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        AOS.init();
+    </script>
+</body>
+</html>
